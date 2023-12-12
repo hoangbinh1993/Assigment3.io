@@ -1,0 +1,151 @@
+@media screen and (max-width: 768px) {
+  
+  /* nav-bar */
+  #nav-bar .container {
+    width: 100%;
+  }
+
+  .my_image {
+    display: none;
+  }
+
+  .full-name {
+    width: 0;
+  }
+  /* end nav-bar */
+
+  /* Phần Thông tin cá nhân */
+  #about {
+    /* width: 100%; */
+    /* grid-template-columns: 50% 50%; */
+  }
+
+  #target,
+  #personal-info {
+    word-wrap: break-word;
+  }
+
+  /* KINH NGHIỆM */
+  #job-info .container {
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-template-rows: auto;
+    gap: 15px;
+
+  }
+
+  .grid-item .icon {
+    align-self: start;
+  }
+
+  .grid-item .icon {
+    padding-top: 15px;
+    margin-left: -15px;
+  }
+
+  /*Đặt số cột cho sở thích */
+  .grid-item .hobby {
+    --spacing: 0px;
+    --column: 3;
+  }
+  
+
+
+  /* CHỨNG CHỈ - GIẢI THƯỞNG */
+  .content-web,
+  .content-javascript,
+  .content-database {
+    flex-direction: column;
+    padding-right: 15px;
+    gap: 5px;
+
+  }
+
+  #certificate img {
+    width: 100%;
+    height: auto;
+  }
+
+/* DỰ ÁN */
+/* bố cục dự án--thu hẹp spacing giữa các cột */
+#project .section-content {
+  gap: 10px;
+  font-size: 0.8rem;
+}
+
+/* vị trí  công việc */
+.icon--project .position-job {
+  flex-direction: column;
+  align-items: start;
+}
+
+ /* FOOTER */
+  #footer ul {
+    /* gap: 15px; */
+  }
+
+ 
+
+
+  /* PHẦN NÂNG CAO--TẠO THÊM PROJECT CHAPTER */
+  #project-charter .project-charter {
+    /* width: 100%; */
+  }
+
+  .project-charter--content {
+    display: block;
+    width: 100%;
+  }
+
+  /* goals */
+  .goal-item {
+    flex-direction: column;
+  }
+  .goal-icon i {
+    font-size: 35px;
+  }
+  /* scope */
+  .scope-content {
+    flex-direction: column;
+  }
+
+  .scope-title {
+    padding-left: 10px;
+    font-weight: 700;
+  }
+
+  /* team */
+  .team-content--item {
+    flex-direction: column;
+  }
+  .team-icon i {
+    font-size: 35px;
+  }
+
+  /* primary */
+  .primary-content--item {
+    flex-direction: column;
+  }
+
+  .goal-content-info,
+  .scope-info,
+  .primary-info,
+  .team-info {
+    padding-left: 10px;
+  }
+
+  /* timeline */
+  .timeline-item {
+    gap: 0px;
+    flex-direction: column;
+  }
+
+  .timeline-time-number span {
+    width: 50px;
+    height: 50px;
+  }
+
+  
+
+}
+
+

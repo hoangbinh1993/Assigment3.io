@@ -1,0 +1,671 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.05;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.bg-grey {
+  background: #f7f7f7;
+}
+
+section > .container {
+  width: 1170px;
+  margin: 0 auto;
+  display: block;
+
+  padding: 30px 50px;
+}
+
+/* 1. XÂY DỰNG PHÀN ẢNH BANNER */
+/* background iamge cho banner */
+#banner {
+  background-image: linear-gradient(
+      rgba(34, 34, 34, 0.6),
+      rgba(34, 34, 34, 0.6)
+    ),
+    url(../images/banner.jpg);
+  height: 70vh;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+/* định dạng cho text banner */
+.text-banner {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* End banner */
+
+/* 2.XÂY DỰNG NAVBAR */
+/* Bố cục cho nav-bar = flex */
+#nav-bar .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0px;
+  height: 50px;
+  position: relative;
+}
+
+/*Set bố cục thành phần nav-bar--item = flex*/
+.container .nav-bar--item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 25px;
+  height: 100%;
+  text-align: center;
+}
+
+/*  Set width cho class="full-name" của text = họ và tên*/
+.full-name {
+  width: 250px;
+}
+
+/* Set cho link <a> */
+#nav-bar a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* Set màu <blue> cho các icon */
+#nav-bar i {
+  color: blue;
+}
+
+/* Hiệu ứng hover cho nav-bar----VÀ COMMENT CODE NÀY ĐỂ LÀM PHẦN SỐ 11 NÂNG CAO - THÊM HÌNH ẢNH CÁ NHÂN VÀO giữa nav-bar */
+
+/* HIỆU ỨNG hover THAY THẾ CHO nav-bar KHI THÊM HÌNH ẢNH CÁ NHÂN ĐỂ VẪN NHÌN THẤY BÀI LÀM TRƯỚC ĐÓ */
+#nav-bar a:hover {
+  color: #fff;
+  background-color: #40c057;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* hiệu ứng action cho nav-bar */
+#nav-bar .nav-bar--item:active {
+  color: red;
+  /* background-color: #8ce99a; */
+}
+
+/* Set  border-left cho 2 ô "THÔNG TIN" "LÝ LỊCH" */
+.border-left {
+  border-left: 1px solid #dee2e6;
+}
+
+/* Set  border-left và border-right cho ô Họ và Tên */
+.border--lr {
+  border-left: 1px solid #dee2e6;
+  border-right: 1px solid #dee2e6;
+}
+
+/* Set  border-left cho 2 ô "CHÚNG CHỈ" "DỰ ÁN" */
+.border-right {
+  border-right: 1px solid #dee2e6;
+}
+
+/* 11. PHẦN NÂNG CAO */
+/* Cài hình đại diện cá nhân */
+.my_image {
+  background-image: url(../images/my-photo.jpg);
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  width: 140px;
+  height: 150px;
+  border: 8px solid white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+/*  End navbar */
+
+/* 3. XÂY DỰNG PHẦN THÔNG TIN CÁ NHÂN  */
+/* Bố cục cho about = grid thành 2 cột */
+#about {
+  /* display: grid; */
+  /* grid-template-columns: 1fr 1fr; */
+}
+
+#target,
+#personal-info {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+.flex-item--shrink {
+  /* flex: 1; */
+}
+/* Set khoảng trắng cho các tiêu đề */
+.section-title {
+  padding-top: 48px;
+  padding-bottom: 32px;
+}
+
+/* Set cho thẻ "Mục tiêu nghề nghiệp */
+#target {
+  padding: 32px;
+  background-color: #f1f3f5;
+}
+
+/* Set cho thẻ "Thông tin cá nhân */
+#personal-info {
+  padding: 32px;
+  background-color: #dee2e6;
+}
+
+/* Bỏ dấu chấm tròn trước các li của ul */
+#personal-info ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+/* Set màu cho icon */
+.personal-info--icon {
+  color: blue;
+  padding-top: 20px;
+}
+/* End thông tin cá nhân */
+
+/* 4. XÂY DỰNG PHẦN THÔNG TIN NGHỀ NGHIỆP  */
+/* Bố cục cho các thẻ = grid-container gồm 3 cột bằng nhau*/
+#job-info .container {
+  display: grid;
+  grid-template-columns: repeat(3, calc(33.333% - 20px));
+  grid-template-rows: auto auto;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Bố cục cho các grid-item */
+#job-info .grid-item {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: 130px 1fr;
+  border: 1px solid gray;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* bố cục cho các job-info có class="content" kéo dài 2 cột */
+.content {
+  grid-area: 2/1/-1/-1;
+  padding: 32px 24px 32px 0px;
+}
+
+/* Canh chỉnh các tiêu đề */
+.grid-item .title {
+  padding-left: 16px;
+  align-self: center;
+}
+
+/* Canh chỉnh cho các icon của tiêu đề */
+.grid-item .icon {
+  align-self: center;
+  justify-self: center;
+}
+
+.grid-item .icon i {
+  font-size: 40px;
+}
+
+/* Canh chỉnh nội dung trong thẻ */
+#job-info ul {
+  padding-left: 32px;
+}
+
+/* Set các <li> nội dung trong thẻ*/
+#job-info li {
+  margin-bottom: 32px;
+  padding-left: 16px;
+  list-style-type: none;
+  position: relative;
+}
+
+/* TẠO CHẤM TRÒN TRƯỚC <li>  */
+#job-info li:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: blue;
+  top: 8px;
+  left: -16px;
+  border-radius: 50%;
+}
+
+/* tạo background cho text-color (hiện tại) */
+.text-color {
+  background-color: blue;
+  color: #fff;
+  padding: 2px 15px;
+  border-radius: 20px;
+}
+/* End nghề nghiệp */
+
+/*5. XÂY DỰNG PHẦN SỞ THÍCH  */
+/* BỐ CỤC GRID CHO NỘI DUNG gồm 4 cột, 2 hàng trong Assigment 02 */
+/* .grid-item .hobby {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  gap: 5px;
+  justify-items: center;
+  padding-left: 5px;
+  flex-wrap: wrap;
+} */
+
+/* CHIA LAYOUT CHO PHẦN SỞ THÍCH BẰNG FLEX-BOX TRONG ASSIGMENT 03 */
+.grid-item .hobby {
+  --spacing: 10px;
+  --column: 4;
+  display: flex;
+  /* gap: 10px; */
+  text-align: center;
+  padding-left: 16px;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 32px 0px;
+  margin-left: calc(-1 * var(--spacing)) - 10px;
+}
+
+.grid-item .hobby .hobby-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 10px;
+  text-align: center;
+  width: calc(calc(100% / var(--column)) - 10px);
+}
+
+/* Set cho các icon */
+.hobby-item i {
+  font-size: 20px;
+  color: blue;
+  border: 2px solid blue;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* set các text của hobby */
+.hobby-text {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-top: 20px;
+}
+/* End sở thích */
+
+/* 6. XÂY DỰNG PHẦN "Ngôn Ngữ", "Kỹ Năng" */
+/* padding-left cho content của "Ngôn Ngữ", "Kỹ Năng" */
+.grid-item .padding-left {
+  padding-left: 16px;
+}
+
+/* Tạo thang điểm <scoring> */
+.scoring {
+  display: inline-block;
+  background: gray;
+  height: 2px;
+  width: 45px;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+/* cho điểm = màu blue */
+.scoring-blue {
+  background: blue;
+}
+/* End ngôn ngữ-kỹ năng  */
+
+/* 7. XÂY DỰNG PHẦN CHỨNG CHỈ-GIẢI THƯỞNG */
+/* Định kích thước cho hình ảnh */
+#certificate img {
+  width: 30%;
+  height: auto;
+}
+
+/* Tạo bố cục grid = 2 cột + 2 hàng */
+#certificate .section-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Set content-web + thêm border-right*/
+.content-web {
+  display: flex;
+  gap: 30px;
+  border-right: 2px solid #d6c08d;
+  padding-right: 15px;
+}
+
+/* Set content-javascrip */
+.content-javascript {
+  display: flex;
+  gap: 30px;
+  padding-left: 15px;
+}
+
+/* Set content-database + thêm border-top*/
+.content-database {
+  display: flex;
+  gap: 30px;
+  border-top: 2px solid #d6c08d;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-right: 15px;
+}
+
+/* Thêm border-top cho ô trống */
+.content-blank {
+  border-top: 2px solid #d6c08d;
+  margin-top: 30px;
+}
+/* End chứng chỉ- giải thưởng */
+
+/* 8. XÂY DỰNG PHẦN DỰ ÁN*/
+/* Bố cục grid cho phần dự án chia thành 3 cột */
+#project .section-content {
+  display: flex;
+  gap: 30px;
+  /* align-items: stretch; */
+}
+
+.project-1,
+.project-2,
+.project-3 {
+  border: 2px solid #ced4da;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Định kích thước cho hình ảnh dự án */
+#project img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Bố cục grid cho các grid-item dưới hình ảnh để tạo border */
+#project .border-around {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Thêm border cho các grid-item--project */
+.grid-item--project {
+  border-top: 1px solid #ced4da;
+  padding: 5px;
+}
+
+/* Tiêu đề của Project */
+.grid-item--project .title-project {
+  padding-left: 25px;
+}
+
+/* icon-project */
+.icon--project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Tạo điểm nhấn nền cho văn bản thời gian của dự án có class="icon" */
+.icon--project .year-project {
+  flex-basis: 20%;
+  background-color: blue;
+  color: white;
+  border-radius: 15px;
+  padding: 2px;
+  text-align: center;
+}
+
+/* Flex-box cho position-job */
+.icon--project .position-job {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-basis: 80%;
+}
+
+/* Định dạng cho icon dự án */
+.icon--project i {
+  font-size: 20px;
+}
+
+/* Định dạng cho bảng */
+/* thêm border-top cho các tr của table */
+#project tr {
+  border-top: 1px solid #ced4da;
+}
+
+/* SEt padding-left cho table */
+#project table td {
+  padding: 5px;
+  vertical-align: top;
+}
+/*End dự án */
+
+/* 8. FOOTER */
+/* Bố cục cho ul bằng <flex> */
+#footer ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 0;
+}
+
+/* Set màu cho icon = blue */
+#footer i {
+  color: blue;
+  font-size: 300%;
+}
+
+/* Set li = flex */
+#footer li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*xóa gạch chân cho text của link(a)  */
+#footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Set hiệu ứng hover cho các icon của footer */
+#footer li a:hover {
+  transform: scale(0.9);
+}
+
+/* Set hiệu ứng action cho các icon của footer */
+#footer li i:active {
+  color: green;
+}
+
+/* END */
+
+/* PHẦN NÂNG CAO--TẠO THÊM PROJECT CHAPTER */
+.project-charter--content {
+  display: grid;
+  grid-template-columns: 50% 25% 25%;
+  grid-template-rows: 1fr 1fr;
+  /* gap: 10px; */
+  margin-top: 50px;
+  background-color: blue;
+  padding: 20px;
+  margin-left: 10px;
+  
+}
+
+.project-charter--content .team {
+  grid-area: 1/2/2/3;
+}
+
+.project-charter--content .timeline {
+  grid-area: 1/3/-1/-1;
+}
+
+.project-charter--content .team {
+  grid-area: 1/2/2/3;
+}
+
+/* goals */
+.goals,
+.team,
+.timeline,
+.scopes,
+.primary {
+  padding: 10px;
+  background-color: #fff;
+}
+
+/* goal-header */
+.goal-header,
+.team-header,
+.timeline-header,
+.scope-header,
+.primary-header {
+  border-bottom: 2px solid gray;
+  padding: 30px 0px;
+  color: blue;
+  font-weight: 700;
+}
+
+.goal-item {
+  border-bottom: 1px solid gray;
+  padding: 10px;
+  display: flex;
+}
+
+.goal-icon {
+  flex-basis: 20%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.goal-icon i {
+  font-size: 30px;
+}
+
+.goal-content-info {
+  flex-basis: 80%;
+}
+
+/* team */
+.team-content--item {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+.team-icon {
+  flex-basis: 20%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.team-icon i {
+  font-size: 20px;
+}
+
+.team-info {
+  flex-basis: 80%;
+}
+
+/* scope */
+.scope-content {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* primary */
+.primary-content--item {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+
+.primary-icon {
+  flex-basis: 20%;
+  margin-top: 10px;
+  text-align: center;
+
+}
+
+.primary-icon i {
+  font-size: 35px;
+}
+
+.primary-info {
+  flex-basis: 80%;
+}
+
+/* timeline */
+.timeline-item {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+
+}
+
+.timeline-time-number {
+  flex-basis: 20%;
+  display: flex;
+  /* padding-left: 10px; */
+}
+
+.timeline-time-number span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #fff;
+  border: 2px solid gray;
+  background-color: rgba(78, 55, 193, 0.471);
+  /* margin-top: 10px; */
+}
+
+.timeline-info {
+  flex-basis: 80%;
+  border-bottom: 1px dashed blue;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
